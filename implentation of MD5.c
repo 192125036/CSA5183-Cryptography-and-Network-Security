@@ -14,7 +14,9 @@ void md5_final(MD5_CTX *ctx, uint8_t result[16]);
 
 int main() {
     MD5_CTX ctx;
-    uint8_t input[] = "the quick brown fox jumps over the lazy dog";
+    uint8_t input[100];
+	printf("Enter the hash value: ");
+	scanf("%s",input);
     uint8_t result[16];
 
     md5_init(&ctx);
@@ -45,6 +47,7 @@ void md5_update(MD5_CTX *ctx, const uint8_t *input, size_t input_len) {
 }
 
 void md5_final(MD5_CTX *ctx, uint8_t result[16]) {
+	
     // Implementation of the finalization function
-    // ...
+    // ...+
 }
